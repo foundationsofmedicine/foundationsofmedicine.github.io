@@ -7,23 +7,30 @@
     <title>Basic Clinical Sciences</title>
      <!-- Compiled and minified CSS -->
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-
      <!-- Compiled and minified JavaScript -->
      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
 </head>
 <body>
     <nav>
         <div class="nav-wrapper grey darken-2" >
-          <a href="../../" class="brand-logo right" style="margin-right: 10px">Foundations of Medicine</a>
+          <a href="../../" class="brand-logo right" style="margin-right: 10px">Basic Sciences</a>
+          <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
           <ul id="nav-mobile" class="left hide-on-med-and-down">
             <li><a href="../">Home</a></li>
             <li><a href="">Basic Clinical Sciences</a></li>
             <li><a href="../clinicalmedicine/">Clinical Medicine</a></li>
             <li><a href="../about">About</a></li>
-
           </ul>
         </div>
       </nav>
+      <ul class="sidenav" id="mobile-demo">
+        <li><a href="../">Home</a></li>
+        <li><a href="">Basic Clinical Sciences</a></li>
+        <li><a href="../clinicalmedicine/">Clinical Medicine</a></li>
+        <li><a href="../about">About</a></li>
+      </ul>
     <div class="container">
         <h1>Basic Clinical Sciences</h1>
         <p>The following is a set of resources provided to supplement studies into the Basic Clinical Sciences. These should be used in the earlier clinical years of medical school, and as a resource to revisit throughout medical school.</p>
@@ -38,6 +45,11 @@
     <div class="container anatomy">
         <h5>Anatomy</h5>
     </div>
-
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+          var elems = document.querySelectorAll('.sidenav');
+          var instances = M.Sidenav.init(elems);
+      });
+    </script>
 </body>
 </html>
